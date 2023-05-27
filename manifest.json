@@ -1,6 +1,6 @@
 {
     "name": "Kinopoisk movies helper",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "permissions": ["storage", "tabs"],
     "host_permissions": ["https://hd.kinopoisk.ru/selection/*"],
     "background": {
