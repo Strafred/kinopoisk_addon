@@ -42,6 +42,23 @@
                     }
                 }
             }
+
+            const observer = new MutationObserver((mutationsList) => {
+                for (const mutation of mutationsList) {
+                    if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                        // New elements have been added to the DOM
+                        console.log('New elements added:', mutation.addedNodes);
+                        // Add your code here to handle the newly added elements
+                    }
+                }
+            });
+
+            const targetNode = document.body; // You can set the target node to the appropriate element on your page
+            const observerOptions = {
+                childList: true, // Observe changes to the child nodes
+                subtree: true, // Observe changes in the entire subtree
+            };
+            observer.observe(targetNode, observerOptions);
         }
     });
 })();
